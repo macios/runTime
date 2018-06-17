@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		5687B25420D6A909003BA674 /* UIView+HookViewSwizzing.m in Sources */ = {isa = PBXBuildFile; fileRef = 5687B25320D6A909003BA674 /* UIView+HookViewSwizzing.m */; };
 		5687B25720D6AD41003BA674 /* UIButton+State.m in Sources */ = {isa = PBXBuildFile; fileRef = 5687B25620D6AD41003BA674 /* UIButton+State.m */; };
+		5687B26220D6AF50003BA674 /* AutoCode.m in Sources */ = {isa = PBXBuildFile; fileRef = 5687B26120D6AF50003BA674 /* AutoCode.m */; };
 		569B8AC220D67946001215C3 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 569B8AC120D67946001215C3 /* Person.m */; };
 		569B8AC820D682F0001215C3 /* Standby.m in Sources */ = {isa = PBXBuildFile; fileRef = 569B8AC720D682F0001215C3 /* Standby.m */; };
 		569B8AD020D6887F001215C3 /* JobTwo.m in Sources */ = {isa = PBXBuildFile; fileRef = 569B8ACF20D6887F001215C3 /* JobTwo.m */; };
@@ -46,6 +47,8 @@
 		5687B25320D6A909003BA674 /* UIView+HookViewSwizzing.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+HookViewSwizzing.m"; sourceTree = "<group>"; };
 		5687B25520D6AD41003BA674 /* UIButton+State.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+State.h"; sourceTree = "<group>"; };
 		5687B25620D6AD41003BA674 /* UIButton+State.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+State.m"; sourceTree = "<group>"; };
+		5687B26020D6AF50003BA674 /* AutoCode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AutoCode.h; sourceTree = "<group>"; };
+		5687B26120D6AF50003BA674 /* AutoCode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AutoCode.m; sourceTree = "<group>"; };
 		569B8AC020D67946001215C3 /* Person.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
 		569B8AC120D67946001215C3 /* Person.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
 		569B8AC620D682F0001215C3 /* Standby.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Standby.h; sourceTree = "<group>"; };
@@ -110,6 +113,15 @@
 			path = hook;
 			sourceTree = "<group>";
 		};
+		5687B25F20D6AEF8003BA674 /* autoCode */ = {
+			isa = PBXGroup;
+			children = (
+				5687B26020D6AF50003BA674 /* AutoCode.h */,
+				5687B26120D6AF50003BA674 /* AutoCode.m */,
+			);
+			path = autoCode;
+			sourceTree = "<group>";
+		};
 		569B8AC920D687E5001215C3 /* messageForward */ = {
 			isa = PBXGroup;
 			children = (
@@ -157,6 +169,7 @@
 		56B54FE920D672C700CB8918 /* runTime */ = {
 			isa = PBXGroup;
 			children = (
+				5687B25F20D6AEF8003BA674 /* autoCode */,
 				5687B25120D6A852003BA674 /* hook */,
 				569B8ACA20D68845001215C3 /* manyInherit */,
 				569B8AC920D687E5001215C3 /* messageForward */,
@@ -322,6 +335,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				56B54FEF20D672C700CB8918 /* ViewController.m in Sources */,
+				5687B26220D6AF50003BA674 /* AutoCode.m in Sources */,
 				569B8AC820D682F0001215C3 /* Standby.m in Sources */,
 				569B8AD320D68899001215C3 /* JobOne.m in Sources */,
 				569B8AD620D688A7001215C3 /* Job.m in Sources */,

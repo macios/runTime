@@ -2,8 +2,8 @@
 //  UIButton+State.m
 //  duoduo
 //
-//  Created by ac hu on 2017/7/6.
-//  Copyright © 2017年 Locke. All rights reserved.
+//  Created by ac hu on 2018/6/17.
+//  Copyright © 2018年 ac hu. All rights reserved.
 //
 
 #import "UIButton+State.h"
@@ -13,13 +13,16 @@
 @implementation UIButton(State)
 
 -(void)setHighBackColor:(UIColor *)highBackColor{
+    //设置关联对象 因为在分类中 @property 并不会自动生成实例变量以及存取方法，所以一般使用关联对象为已经存在的类添加『属性』。
     objc_setAssociatedObject(self, @"highBackColor", highBackColor, OBJC_ASSOCIATION_COPY_NONATOMIC);
     [self setImage:[self creatImageFromColor:highBackColor size:CGSizeMake(self.frame.size.width, self.frame.size.height)] forState:UIControlStateHighlighted];
 }
 
 -(UIColor *)highBackColor{
+    //获取关联对象
     return objc_getAssociatedObject(self, @"highBackColor");
 }
+
 
 -(void)setHighImage:(UIImage *)highImage{
     objc_setAssociatedObject(self, @"highImage", highImage, OBJC_ASSOCIATION_COPY_NONATOMIC);
@@ -57,12 +60,12 @@
     return objc_getAssociatedObject(self, @"title");
 }
 
--(void)setFont:(NSInteger)font{
-    objc_setAssociatedObject(self, @"font", [NSString stringWithFormat:@"%d",(int)font], OBJC_ASSOCIATION_COPY_NONATOMIC);
+-(void)setFont:(CGFloat)font{
+    objc_setAssociatedObject(self, @"font", [NSString stringWithFormat:@"%f",font], OBJC_ASSOCIATION_COPY_NONATOMIC);
     self.titleLabel.font = [UIFont systemFontOfSize:font];
 }
 
--(NSInteger)font{
+-(CGFloat)font{
     return [objc_getAssociatedObject(self, @"font") integerValue];
 }
 

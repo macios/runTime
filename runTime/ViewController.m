@@ -9,6 +9,8 @@
 #import "ViewController.h"
 #import "Person.h"
 #import "Job.h"
+#import "AutoCode.h"
+#import "UIButton+State.h"
 
 @interface ViewController ()
 
@@ -37,9 +39,21 @@
     [self.view setBackgroundColor:[UIColor blackColor]];
     
     //封装伪属性
+    UIButton *btn = [UIButton buttonWithType:UIButtonTypeSystem];
+    btn.frame = CGRectMake(20, 60, 100, 30);
+    btn.title = @"小明";
+    btn.backgroundColor = [UIColor darkTextColor];
+    btn.textColor = [UIColor whiteColor];
+    btn.font = 16.f;
+    [self.view addSubview:btn];
+    NSLog(@"%f",btn.font);
     
     //自动化归解档
-//    []
+    AutoCode *code = [AutoCode new];
+    code.name = @"xiaoHong";
+    
+    NSString *path = [NSString stringWithFormat:@"%@/auto.plist",NSHomeDirectory()];
+    [NSKeyedArchiver archiveRootObject:code toFile:path];
 }
 
 
