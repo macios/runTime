@@ -39,10 +39,10 @@
     [self.view setBackgroundColor:[UIColor blackColor]];
     
     //拓展已有类的属性<这里做了个伪属性>
-    UIButton *btn = [UIButton buttonWithType:UIButtonTypeSystem];
+    UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
     btn.frame = CGRectMake(20, 60, 100, 30);
     btn.title = @"小明";
-    btn.backgroundColor = [UIColor darkTextColor];
+    btn.highBackColor = [UIColor redColor];
     btn.textColor = [UIColor whiteColor];
     btn.font = 16.f;
     [self.view addSubview:btn];

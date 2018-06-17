@@ -69,9 +69,8 @@
     return [objc_getAssociatedObject(self, @"font") integerValue];
 }
 
-//通过颜色来生成一个纯色图片
+//通过颜色来生成一个纯色图片 这里应该属于uiimage的拓展，但是这里封装保持原有性，不依赖其他
 -(UIImage *)creatImageFromColor:(UIColor *)color size:(CGSize)size{
-    
     CGRect rect = CGRectMake(0, 0, size.width, size.height);
     UIGraphicsBeginImageContext(rect.size);
     CGContextRef context = UIGraphicsGetCurrentContext();
