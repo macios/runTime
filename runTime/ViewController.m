@@ -38,7 +38,7 @@
     //消息拦截/交换
     [self.view setBackgroundColor:[UIColor blackColor]];
     
-    //封装伪属性
+    //拓展已有类的属性<这里做了个伪属性>
     UIButton *btn = [UIButton buttonWithType:UIButtonTypeSystem];
     btn.frame = CGRectMake(20, 60, 100, 30);
     btn.title = @"小明";
