@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		569B8AC220D67946001215C3 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 569B8AC120D67946001215C3 /* Person.m */; };
+		569B8AC820D682F0001215C3 /* Standby.m in Sources */ = {isa = PBXBuildFile; fileRef = 569B8AC720D682F0001215C3 /* Standby.m */; };
+		569B8AD020D6887F001215C3 /* JobTwo.m in Sources */ = {isa = PBXBuildFile; fileRef = 569B8ACF20D6887F001215C3 /* JobTwo.m */; };
+		569B8AD320D68899001215C3 /* JobOne.m in Sources */ = {isa = PBXBuildFile; fileRef = 569B8AD220D68899001215C3 /* JobOne.m */; };
+		569B8AD620D688A7001215C3 /* Job.m in Sources */ = {isa = PBXBuildFile; fileRef = 569B8AD520D688A7001215C3 /* Job.m */; };
 		56B54FEC20D672C700CB8918 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 56B54FEB20D672C700CB8918 /* AppDelegate.m */; };
 		56B54FEF20D672C700CB8918 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56B54FEE20D672C700CB8918 /* ViewController.m */; };
 		56B54FF220D672C700CB8918 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56B54FF020D672C700CB8918 /* Main.storyboard */; };
@@ -35,6 +40,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		569B8AC020D67946001215C3 /* Person.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
+		569B8AC120D67946001215C3 /* Person.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
+		569B8AC620D682F0001215C3 /* Standby.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Standby.h; sourceTree = "<group>"; };
+		569B8AC720D682F0001215C3 /* Standby.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Standby.m; sourceTree = "<group>"; };
+		569B8ACE20D6887F001215C3 /* JobTwo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JobTwo.h; sourceTree = "<group>"; };
+		569B8ACF20D6887F001215C3 /* JobTwo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JobTwo.m; sourceTree = "<group>"; };
+		569B8AD120D68899001215C3 /* JobOne.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JobOne.h; sourceTree = "<group>"; };
+		569B8AD220D68899001215C3 /* JobOne.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JobOne.m; sourceTree = "<group>"; };
+		569B8AD420D688A7001215C3 /* Job.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Job.h; sourceTree = "<group>"; };
+		569B8AD520D688A7001215C3 /* Job.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Job.m; sourceTree = "<group>"; };
 		56B54FE720D672C700CB8918 /* runTime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = runTime.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		56B54FEA20D672C700CB8918 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		56B54FEB20D672C700CB8918 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -78,6 +93,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		569B8AC920D687E5001215C3 /* messageForward */ = {
+			isa = PBXGroup;
+			children = (
+				569B8AC020D67946001215C3 /* Person.h */,
+				569B8AC120D67946001215C3 /* Person.m */,
+				569B8AC620D682F0001215C3 /* Standby.h */,
+				569B8AC720D682F0001215C3 /* Standby.m */,
+			);
+			path = messageForward;
+			sourceTree = "<group>";
+		};
+		569B8ACA20D68845001215C3 /* manyInherit */ = {
+			isa = PBXGroup;
+			children = (
+				569B8AD120D68899001215C3 /* JobOne.h */,
+				569B8AD220D68899001215C3 /* JobOne.m */,
+				569B8ACE20D6887F001215C3 /* JobTwo.h */,
+				569B8ACF20D6887F001215C3 /* JobTwo.m */,
+				569B8AD420D688A7001215C3 /* Job.h */,
+				569B8AD520D688A7001215C3 /* Job.m */,
+			);
+			path = manyInherit;
+			sourceTree = "<group>";
+		};
 		56B54FDE20D672C700CB8918 = {
 			isa = PBXGroup;
 			children = (
@@ -101,6 +140,8 @@
 		56B54FE920D672C700CB8918 /* runTime */ = {
 			isa = PBXGroup;
 			children = (
+				569B8ACA20D68845001215C3 /* manyInherit */,
+				569B8AC920D687E5001215C3 /* messageForward */,
 				56B54FEA20D672C700CB8918 /* AppDelegate.h */,
 				56B54FEB20D672C700CB8918 /* AppDelegate.m */,
 				56B54FED20D672C700CB8918 /* ViewController.h */,
@@ -263,7 +304,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				56B54FEF20D672C700CB8918 /* ViewController.m in Sources */,
+				569B8AC820D682F0001215C3 /* Standby.m in Sources */,
+				569B8AD320D68899001215C3 /* JobOne.m in Sources */,
+				569B8AD620D688A7001215C3 /* Job.m in Sources */,
+				569B8AD020D6887F001215C3 /* JobTwo.m in Sources */,
 				56B54FFA20D672CA00CB8918 /* main.m in Sources */,
+				569B8AC220D67946001215C3 /* Person.m in Sources */,
 				56B54FEC20D672C700CB8918 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

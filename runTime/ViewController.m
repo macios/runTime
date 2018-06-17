@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "Person.h"
 
 @interface ViewController ()
 
@@ -16,7 +17,17 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    Person *per = [Person new];
+    //模拟消息转发机制
+    //1.动态方法解析
+    //2.找备用接收者
+    //3.1方法签名 3.2消息转发
+    //4消息最终没有处理
+    [per sendMessage:@"dd"];
+    
+    //模拟避免循环引用
+    
+    //模拟多继承
 }
 
 
