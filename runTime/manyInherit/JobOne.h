@@ -8,6 +8,12 @@
 
 #import <Foundation/Foundation.h>
 
+@protocol JobOneProtocol
+-(void)buyApple;
+@end
+
 @interface JobOne : NSObject
+
+
 
 @end

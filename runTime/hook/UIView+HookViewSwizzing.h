@@ -1,5 +1,5 @@
 //
-//  AppDelegate.h
+//  UIView+HookViewSwizzing.h
 //  runTime
 //
 //  Created by ac hu on 2018/6/17.
@@ -8,10 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
-
-@property (strong, nonatomic) UIWindow *window;
-
+@interface UIView (HookViewSwizzing)
 
 @end
-

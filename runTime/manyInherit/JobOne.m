@@ -8,6 +8,12 @@
 
 #import "JobOne.h"
 
-@implementation JobOne
+@interface JobOne() <JobOneProtocol>
 
+@end
+
+@implementation JobOne
+-(void)buyApple{
+    NSLog(@"我的工作是买苹果");
+}
 @end

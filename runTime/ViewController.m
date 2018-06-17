@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "Person.h"
+#import "Job.h"
 
 @interface ViewController ()
 
@@ -27,7 +28,18 @@
     
     //模拟避免循环引用
     
-    //模拟多继承
+    //利用消息转发模拟多继承
+    Job *job = [Job new];
+    [job buyApple];
+    [job buyWater];
+    
+    //消息拦截/交换
+    [self.view setBackgroundColor:[UIColor blackColor]];
+    
+    //封装伪属性
+    
+    //自动化归解档
+//    []
 }
 
 

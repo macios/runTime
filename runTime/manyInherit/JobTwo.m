@@ -8,6 +8,13 @@
 
 #import "JobTwo.h"
 
+@interface JobTwo() <JobTwoProtocol>
+
+@end
+
 @implementation JobTwo
 
+-(void)buyWater{
+    NSLog(@"我的工作是买水");
+}
 @end

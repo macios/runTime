@@ -7,7 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "JobTwo.h"
+#import "JobOne.h"
 
-@interface Job : NSObject
-
+//NSProxy 抽象类虚类 不代构造方法更轻量级
+@interface Job : NSObject <JobOneProtocol,JobTwoProtocol>
+-(instancetype)init;
 @end
