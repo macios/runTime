@@ -9,5 +9,5 @@
 #import <Foundation/Foundation.h>
 
 @interface NSObject (MyKVO)
-
+- (void)my_addObserver:(NSObject *)observer forKeyPath:(NSString *)keyPath options:(NSKeyValueObservingOptions)options context:(nullable void *)context;
 @end

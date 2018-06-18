@@ -12,8 +12,12 @@
 #import "AutoCode.h"
 #import "UIButton+State.h"
 
-@interface ViewController ()
+#import "NSObject+MyKVO.h"
 
+#import <objc/runtime.h>
+
+@interface ViewController ()
+@property(nonatomic,strong)Person *person;
 @end
 
 @implementation ViewController
@@ -51,16 +55,39 @@
     //自动化归解档
     AutoCode *code = [AutoCode new];
     code.name = @"xiaoHong";
-    
     NSString *path = [NSString stringWithFormat:@"%@/auto.plist",NSHomeDirectory()];
     [NSKeyedArchiver archiveRootObject:code toFile:path];
+    
+    //模拟kvo
+    self.person = [Person new];
+//    [_person addObserver:self forKeyPath:@"name" options:NSKeyValueObservingOptionNew context:nil];//会新注册NSKVONotifying_Person会变成Person的子类
+    [_person my_addObserver:self forKeyPath:@"name" options:NSKeyValueObservingOptionNew context:nil];
+    _person.name = @"小米";
+    NSLog(@"已注册的类有%@",[ViewController findSubClass:[_person class]]);
 }
 
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
++(NSArray *)findSubClass:(Class)defClass{
+    //注册类的总数
+    int count = objc_getClassList(NULL, 0);
+    //获取所有已注册类
+    Class *classList = (Class *)malloc(sizeof(Class)*count);
+    objc_getClassList(classList, count);
+    
+    NSMutableArray *array = [NSMutableArray arrayWithCapacity:1];
+    
+    for (int i = 0; i < count; i ++) {
+        if (defClass == class_getSuperclass(classList[i])) {
+            [array addObject:classList[i]];
+        }
+    }
+    free(classList);
+    return [array copy];
 }
 
-
+-(void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context{
+    NSLog(@"值发生了变化%@",change);
+}
+-(void)dealloc{
+    [_person removeObserver:self forKeyPath:@"name"];
+}
 @end
