@@ -11,6 +11,8 @@
 		5687B25720D6AD41003BA674 /* UIButton+State.m in Sources */ = {isa = PBXBuildFile; fileRef = 5687B25620D6AD41003BA674 /* UIButton+State.m */; };
 		5687B26220D6AF50003BA674 /* AutoCode.m in Sources */ = {isa = PBXBuildFile; fileRef = 5687B26120D6AF50003BA674 /* AutoCode.m */; };
 		5687B26C20D6BB5B003BA674 /* NSObject+MyKVO.m in Sources */ = {isa = PBXBuildFile; fileRef = 5687B26B20D6BB5B003BA674 /* NSObject+MyKVO.m */; };
+		568EBAB820D7906100162B56 /* HuWeekProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 568EBAB720D7906100162B56 /* HuWeekProxy.m */; };
+		568EBABB20D7926200162B56 /* HuTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 568EBABA20D7926200162B56 /* HuTimer.m */; };
 		569B8AC220D67946001215C3 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 569B8AC120D67946001215C3 /* Person.m */; };
 		569B8AC820D682F0001215C3 /* Standby.m in Sources */ = {isa = PBXBuildFile; fileRef = 569B8AC720D682F0001215C3 /* Standby.m */; };
 		569B8AD020D6887F001215C3 /* JobTwo.m in Sources */ = {isa = PBXBuildFile; fileRef = 569B8ACF20D6887F001215C3 /* JobTwo.m */; };
@@ -52,6 +54,10 @@
 		5687B26120D6AF50003BA674 /* AutoCode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AutoCode.m; sourceTree = "<group>"; };
 		5687B26A20D6BB5B003BA674 /* NSObject+MyKVO.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+MyKVO.h"; sourceTree = "<group>"; };
 		5687B26B20D6BB5B003BA674 /* NSObject+MyKVO.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+MyKVO.m"; sourceTree = "<group>"; };
+		568EBAB620D7906100162B56 /* HuWeekProxy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HuWeekProxy.h; sourceTree = "<group>"; };
+		568EBAB720D7906100162B56 /* HuWeekProxy.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HuWeekProxy.m; sourceTree = "<group>"; };
+		568EBAB920D7926200162B56 /* HuTimer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HuTimer.h; sourceTree = "<group>"; };
+		568EBABA20D7926200162B56 /* HuTimer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HuTimer.m; sourceTree = "<group>"; };
 		569B8AC020D67946001215C3 /* Person.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
 		569B8AC120D67946001215C3 /* Person.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
 		569B8AC620D682F0001215C3 /* Standby.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Standby.h; sourceTree = "<group>"; };
@@ -134,6 +140,17 @@
 			path = myKVO;
 			sourceTree = "<group>";
 		};
+		568EBAB520D7902C00162B56 /* myTimer */ = {
+			isa = PBXGroup;
+			children = (
+				568EBAB620D7906100162B56 /* HuWeekProxy.h */,
+				568EBAB720D7906100162B56 /* HuWeekProxy.m */,
+				568EBAB920D7926200162B56 /* HuTimer.h */,
+				568EBABA20D7926200162B56 /* HuTimer.m */,
+			);
+			path = myTimer;
+			sourceTree = "<group>";
+		};
 		569B8AC920D687E5001215C3 /* messageForward */ = {
 			isa = PBXGroup;
 			children = (
@@ -181,6 +198,7 @@
 		56B54FE920D672C700CB8918 /* runTime */ = {
 			isa = PBXGroup;
 			children = (
+				568EBAB520D7902C00162B56 /* myTimer */,
 				5687B26920D6BB3E003BA674 /* myKVO */,
 				5687B25F20D6AEF8003BA674 /* autoCode */,
 				5687B25120D6A852003BA674 /* hook */,
@@ -352,10 +370,12 @@
 				569B8AC820D682F0001215C3 /* Standby.m in Sources */,
 				569B8AD320D68899001215C3 /* JobOne.m in Sources */,
 				569B8AD620D688A7001215C3 /* Job.m in Sources */,
+				568EBAB820D7906100162B56 /* HuWeekProxy.m in Sources */,
 				569B8AD020D6887F001215C3 /* JobTwo.m in Sources */,
 				56B54FFA20D672CA00CB8918 /* main.m in Sources */,
 				569B8AC220D67946001215C3 /* Person.m in Sources */,
 				5687B26C20D6BB5B003BA674 /* NSObject+MyKVO.m in Sources */,
+				568EBABB20D7926200162B56 /* HuTimer.m in Sources */,
 				5687B25420D6A909003BA674 /* UIView+HookViewSwizzing.m in Sources */,
 				56B54FEC20D672C700CB8918 /* AppDelegate.m in Sources */,
 				5687B25720D6AD41003BA674 /* UIButton+State.m in Sources */,

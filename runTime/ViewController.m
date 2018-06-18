@@ -13,11 +13,13 @@
 #import "UIButton+State.h"
 
 #import "NSObject+MyKVO.h"
+#import "HuTimer.h"
 
 #import <objc/runtime.h>
 
 @interface ViewController ()
 @property(nonatomic,strong)Person *person;
+@property(nonatomic,strong)HuTimer *weekTimer;
 @end
 
 @implementation ViewController
@@ -32,7 +34,9 @@
     //4消息最终没有处理
     [per sendMessage:@"dd"];
     
-    //模拟避免循环引用
+    //自定义解决timer避免循环引用 self>timer>self
+    _weekTimer = [HuTimer timerWithTimeInterval:1 target:self selector:@selector(timerMethod) userInfo:nil repeats:YES runloopMode:NSDefaultRunLoopMode];
+//    [_weekTimer fire];
     
     //利用消息转发模拟多继承
     Job *job = [Job new];
@@ -87,7 +91,14 @@
 -(void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context{
     NSLog(@"值发生了变化%@",change);
 }
+
+-(void)timerMethod{
+    NSLog(@"timer在运行");
+}
+
 -(void)dealloc{
     [_person removeObserver:self forKeyPath:@"name"];
+    [self.weekTimer invalidate];
+    self.weekTimer = nil;
 }
 @end
