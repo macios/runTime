@@ -34,7 +34,7 @@
     //4消息最终没有处理
     [per sendMessage:@"dd"];
     
-    //自定义解决timer避免循环引用 self>timer>self
+    //自定义解决timer解决循环引用 self>timer>self
     _weekTimer = [HuTimer timerWithTimeInterval:1 target:self selector:@selector(timerMethod) userInfo:nil repeats:YES runloopMode:NSDefaultRunLoopMode];
 //    [_weekTimer fire];
     
