@@ -68,6 +68,7 @@
     [_person my_addObserver:self forKeyPath:@"name" options:NSKeyValueObservingOptionNew context:nil];
     _person.name = @"小米";
     NSLog(@"已注册的类有%@",[ViewController findSubClass:[_person class]]);
+    perSonType one = 1;
 }
 
 +(NSArray *)findSubClass:(Class)defClass{

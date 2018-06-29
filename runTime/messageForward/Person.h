@@ -8,9 +8,20 @@
 
 #import <Foundation/Foundation.h>
 
+typedef enum{
+    perSonTypeOne = 0,
+    perSonTypeTwo
+}perSonType;
+
 @interface Person : NSObject
 
 @property(nonatomic,copy)NSString *name;
 
+
+/**
+ aa
+
+ @param message aa
+ */
 -(void)sendMessage:(NSString *)message;
 @end
